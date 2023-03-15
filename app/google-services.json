@@ -1,0 +1,106 @@
+{
+  "project_info": {
+    "project_number": "435871515306",
+    "firebase_url": "https://login-with-firebase-202fa.firebaseio.com",
+    "project_id": "login-with-firebase-202fa",
+    "storage_bucket": "login-with-firebase-202fa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:435871515306:android:97ba910ec4b2dec49306d3",
+        "android_client_info": {
+          "package_name": "com.dam.logintofirebasesimpleform"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "435871515306-ss3g33v64eji62pv9k62q32h4s3lsfou.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNZRVbdiexdgMCaM8tXlM0xxmrZqslduI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "435871515306-ss3g33v64eji62pv9k62q32h4s3lsfou.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:435871515306:android:760f4c7c6e762d409306d3",
+        "android_client_info": {
+          "package_name": "com.dam.loginwithfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "435871515306-tlt4e3j7rqn39b790radam65rnijamjq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dam.loginwithfirebase",
+            "certificate_hash": "ca4e861bced33d8bf8909f54dca850af28a746fa"
+          }
+        },
+        {
+          "client_id": "435871515306-ss3g33v64eji62pv9k62q32h4s3lsfou.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNZRVbdiexdgMCaM8tXlM0xxmrZqslduI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "435871515306-ss3g33v64eji62pv9k62q32h4s3lsfou.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:435871515306:android:f551f2e20824268e9306d3",
+        "android_client_info": {
+          "package_name": "com.samuelvialle.tutofirebaseauthkotlin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "435871515306-ss3g33v64eji62pv9k62q32h4s3lsfou.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNZRVbdiexdgMCaM8tXlM0xxmrZqslduI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "435871515306-ss3g33v64eji62pv9k62q32h4s3lsfou.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

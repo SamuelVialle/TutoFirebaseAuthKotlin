@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Tuto Firebase Auth Kotlin</string>
+    <string name="register_screen">Register screen</string>
+    <string name="login_screen">Login screen</string>
+    <string name="login">login</string>
+    <string name="register">Register</string>
+    <string name="logout">Logout</string>
+    <string name="don_t_have_an_account">"Don't have an account? "</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="please_enter_email">Please enter email</string>
+    <string name="please_enter_password">Please enter password</string>
+    <string name="you_are_successfully_registed">Your are successfully registed</string>
+    <string name="you_are_successfully_logged">You are successfully logged</string>
+</resources>
