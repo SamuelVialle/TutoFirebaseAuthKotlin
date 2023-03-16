@@ -16,6 +16,8 @@ import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+import com.samuelvialle.tutofirebaseauthkotlin.firestore.FirestoreClass
+import com.samuelvialle.tutofirebaseauthkotlin.models.User
 
 class RegisterActivity : AppCompatActivity() {
 
@@ -36,14 +38,15 @@ class RegisterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
-//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R){
-//            window.insetsController?.hide(WindowInsets.Type.statusBars())
-//        } else {
-//            window.setFlags(
-//                WindowManager.LayoutParams.FLAG_FULLSCREEN,
-//                WindowManager.LayoutParams.FLAG_FULLSCREEN
-//            )
-//        }
+        @Suppress("DEPRECATION")
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R){
+            window.insetsController?.hide(WindowInsets.Type.statusBars())
+        } else {
+            window.setFlags(
+                WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN
+            )
+        }
 
         initUi()
 
@@ -80,6 +83,18 @@ class RegisterActivity : AppCompatActivity() {
                                     Toast.LENGTH_LONG
                                 ).show()
 
+                                // Gestion de l'enregistrement dans Firestore
+                                val user = User(
+                                    firebaseUser.uid,
+                                    email
+                                )
+
+                                Log.i("TAG", "onCreate: $user")
+
+                                FirestoreClass().registerUser(this, user)
+
+                                // Fin ajout dans firestore
+
                                 val intent = Intent(this@RegisterActivity, MainActivity::class.java)
                                 intent.flags =
                                     Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
@@ -105,4 +120,27 @@ class RegisterActivity : AppCompatActivity() {
             finish()
         })
     }
+
+    fun userRegistrationSuccess(){
+        Toast.makeText(
+            this@RegisterActivity,
+            resources.getString(R.string.you_are_successfully_registed),
+            Toast.LENGTH_LONG
+        ).show()
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
