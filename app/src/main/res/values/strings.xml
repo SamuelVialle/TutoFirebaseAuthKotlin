@@ -13,4 +13,6 @@
     <string name="please_enter_password">Please enter password</string>
     <string name="you_are_successfully_registed">Your are successfully registed</string>
     <string name="you_are_successfully_logged">You are successfully logged</string>
+    <string name="create_an_account">create an account</string>
+    <string name="first_name">First name</string>
 </resources>
