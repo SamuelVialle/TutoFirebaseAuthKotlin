@@ -1,14 +1,15 @@
-package com.samuelvialle.tutofirebaseauthkotlin
+package com.samuelvialle.tutofirebaseauthkotlin.activities
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import com.google.firebase.auth.FirebaseAuth
+import com.samuelvialle.tutofirebaseauthkotlin.R
+import com.samuelvialle.tutofirebaseauthkotlin.activities.login.LoginActivity
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity() {
 
     private var btnLogout: Button? = null
     private var tvUserId: TextView? = null

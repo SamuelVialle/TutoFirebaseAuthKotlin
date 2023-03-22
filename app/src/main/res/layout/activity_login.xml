@@ -4,101 +4,128 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    android:backgroundTintMode="add"
+    tools:context=".activities.login.LoginActivity">
 
     <FrameLayout
-        android:id="@+id/frameLayout"
+        android:id="@+id/fl_header"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:background="#2196F3"
+        android:layout_height="@dimen/auth_header_image_height"
+        android:background="@drawable/shape_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/logo"
+            android:layout_width="@dimen/auth_logo_width_size"
+            android:layout_height="@dimen/auth_logo_height_size"
+            android:layout_gravity="center"
             android:contentDescription="@string/app_name"
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/firebase" />
     </FrameLayout>
 
-    <TextView
+    <com.samuelvialle.tutofirebaseauthkotlin.customWidgets.MyTextViewBold
         android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Login screen"
+        android:layout_marginTop="@dimen/til_margin_size"
+        android:text="@string/btn_lbl_login"
         android:textAllCaps="true"
-        android:textSize="18sp"
-        android:textStyle="bold"
+        android:textSize="@dimen/title_textSize"
+        android:padding="@dimen/et_padding"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/fl_header" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout"
+        android:id="@+id/til_email"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
-        android:hint="Email"
+        android:layout_marginStart="@dimen/til_margin_size"
+        android:layout_marginTop="@dimen/til_margin_size"
+        android:layout_marginEnd="@dimen/til_margin_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_title">
 
-        <com.google.android.material.textfield.TextInputEditText
+        <com.samuelvialle.tutofirebaseauthkotlin.customWidgets.MyEditText
             android:id="@+id/et_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textEmailAddress" />
+            android:hint="@string/hint_email"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress"
+            android:padding="@dimen/et_padding"
+            android:text="sam@yopmail.com"
+            android:textSize="@dimen/et_textSize" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout2"
+        android:id="@+id/til_password"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
-        android:hint="Password"
+        android:layout_marginStart="@dimen/til_margin_size"
+        android:layout_marginTop="@dimen/til_margin_size"
+        android:layout_marginEnd="@dimen/til_margin_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
-        app:passwordToggleEnabled="false">
+        app:layout_constraintTop_toBottomOf="@+id/til_email"
+        app:passwordToggleEnabled="true">
 
-        <com.google.android.material.textfield.TextInputEditText
+        <com.samuelvialle.tutofirebaseauthkotlin.customWidgets.MyEditText
             android:id="@+id/et_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword" />
+            android:hint="@string/hint_password"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:padding="@dimen/et_padding"
+            android:text="123456789"
+            android:textSize="@dimen/et_textSize" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
-        android:id="@+id/btn_login"
-        android:layout_width="wrap_content"
+    <com.samuelvialle.tutofirebaseauthkotlin.customWidgets.MyTextView
+        android:id="@+id/btn_forgot_password"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/login"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="@dimen/til_margin_size"
+        android:layout_marginEnd="@dimen/til_margin_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/til_password"
+        android:gravity="end"
+        android:text="@string/btn_forgot_password" />
+
+    <com.samuelvialle.tutofirebaseauthkotlin.customWidgets.MyButton
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_button_background"
+        android:textColor="@color/white"
+        android:text="@string/btn_lbl_login"
+        app:layout_constraintTop_toBottomOf="@+id/btn_forgot_password"
+        android:layout_marginTop="@dimen/til_margin_size"
+        android:layout_marginStart="@dimen/til_margin_size"
+        android:layout_marginEnd="@dimen/til_margin_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="@dimen/til_margin_size"
         android:orientation="horizontal"
         app:layout_constraintTop_toBottomOf="@+id/btn_login">
 
-        <TextView
+        <com.samuelvialle.tutofirebaseauthkotlin.customWidgets.MyTextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -106,15 +133,15 @@
             android:gravity="end"
             android:text="@string/don_t_have_an_account" />
 
-        <TextView
+        <com.samuelvialle.tutofirebaseauthkotlin.customWidgets.MyTextView
             android:id="@+id/btn_register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:paddingStart="8dp"
-            android:paddingEnd="8dp"
-            android:text="@string/register"
+            android:paddingStart="@dimen/et_padding"
+            android:paddingEnd="@dimen/et_padding"
+            android:text="@string/btn_lbl_register"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/purple_200" />
+            android:textColor="@color/color_primary" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
